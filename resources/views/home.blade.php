@@ -35,22 +35,26 @@
             height: 100%;
         }
 
-        .sub_div {
+        .sub_div_one {
             position: fixed;
-            left: 700px;
-            bottom: 180px;
+            left: -35%;
+            bottom: 10%;
+            width: 100%;
+
         }
 
-        .sub_div2 {
+        .sub_div_two {
             position: fixed;
-            left: 300px;
-            bottom: 180px;
+            left: 0%;
+            bottom: 10%;
+            width: 100%;
         }
 
-        .sub_div3 {
+        .sub_div_three {
             position: fixed;
-            left: 1200px;
-            bottom: 180px;
+            left: 35%;
+            bottom: 10%;
+            width: 100%;
         }
     </style>
 </head>
@@ -61,10 +65,9 @@
     </div>
     <div id="app">
         <book></book>
-
-        <custom-button class="sub_div" title="Tickets" href="{{url('/')}}"></custom-button>
-        <custom-button class="sub_div2" title="Events" href="{{url('/')}}"></custom-button>
-        <custom-button class="sub_div3" title="Back" href="{{url('/')}}"></custom-button>
+        <custom-button class="sub_div_one" title="Events" href="{{url('/')}}"></custom-button>
+        <custom-button class="sub_div_two" title="Tickets" href="{{url('/')}}"></custom-button>
+        <custom-button class="sub_div_three" title="Back" href="{{url('/')}}"></custom-button>
 
 
     </div>
