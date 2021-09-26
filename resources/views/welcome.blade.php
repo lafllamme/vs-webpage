@@ -10,7 +10,9 @@
 
     <!-- Styles -->
     <style>
-
+        body {
+            background-color: black;
+        }
     </style>
 </head>
 
@@ -32,12 +34,18 @@
 
 
     <div id="app">
-        <welcome></welcome>
-        <eye></eye>
+        <welcome onclick="gotoWebsite('{{ url('/home/') }}')"></welcome>
+        <eye onclick="gotoWebsite('{{ url('/home/') }}')"></eye>
     </div>
 
 
 </body>
 
 </html>
-<script src="{{ mix('/js/app.js') }}"></script>
+<script>
+    gotoWebsite = (string) => {
+        window.location = string;
+    }
+</script>
+<script src=" {{ mix('/js/app.js') }}">
+</script>

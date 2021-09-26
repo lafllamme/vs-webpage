@@ -2,9 +2,7 @@
   <div class="wrap">
     <br />
     <br />
-
     <br />
-
     <br />
 
     <span class="letter">V</span>
@@ -12,6 +10,7 @@
     <span class="letter">R</span>
     <span class="letter">S</span>
     <span class="letter">C</span>
+    <span class="letter">H</span>
     <span class="letter">L</span>
     <span class="letter">U</span>
     <span class="letter">E</span>
@@ -37,7 +36,8 @@
 export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+
 @font-face {
   font-family: "MyWebFont";
   src: url("/fonts/font.woff2") format("woff2");
@@ -71,7 +71,7 @@ body {
 .letter,
 .space {
   display: inline-block;
-  font-size: 6vw;
+  font-size: 5.7vw;
   text-transform: uppercase;
   font-family: "MyWebFont", Fallback, sans-serif;
   font-weight: bold;
@@ -83,7 +83,7 @@ body {
   width: 0.5em;
 }
 
-@for $i from 1 through 27 {
+@for $i from 1 through 28 {
   $n: 1;
   $r: random(10);
   @if ($r > 5) {

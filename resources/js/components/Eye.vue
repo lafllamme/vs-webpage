@@ -26,7 +26,7 @@
 export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 // COLOR VARIABLES
 $c-01: #6d6e72; // Gray
 $c-02: #e6e6e6; // Light Gray
