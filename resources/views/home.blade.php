@@ -57,7 +57,7 @@
 
 <body>
     <div id="background">
-        <img src="https://www.gifcen.com/wp-content/uploads/2021/03/optical-illusions-gif.gif" class="stretch" alt="" />
+        <img src="https://i.imgur.com/F0ESAIH.gif" class="stretch" alt="" />
     </div>
     <div id="app">
         <book></book>
