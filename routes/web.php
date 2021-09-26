@@ -20,10 +20,10 @@ Route::get('/', function () {
 Route::get('home', function () {
     return view('home');
 });
-/* 
-Route::get('tickets', function () {
-    return view('tickets');
-}); */
+
+Route::get('music', function () {
+    return view('music');
+});
 
 Route::get('events', function () {
     return view('events');

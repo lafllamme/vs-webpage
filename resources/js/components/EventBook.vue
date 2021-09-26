@@ -25,10 +25,13 @@
 
 <script>
 export default {};
-
+new Audio(
+  "https://talkglitz.media/wp-content/uploads/2018/08/Travis_Scott_-_Stop_Trying_To_Be_God_talkglitz.tv.mp3"
+).play();
 </script>
 
 <style scoped>
+
 .perspective-wrapper {
   position: relative;
   height: 700px;

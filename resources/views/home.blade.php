@@ -66,7 +66,7 @@
     <div id="app">
         <book></book>
         <custom-button class="sub_div_one" title="Events" href="{{url('/events')}}"></custom-button>
-        <custom-button class="sub_div_two" title="Tickets" href="{{url('tickets')}}"></custom-button>
+        <custom-button class="sub_div_two" title="Music" href="{{url('music')}}"></custom-button>
         <custom-button class="sub_div_three" title="Back" href="{{url('/')}}"></custom-button>
 
 
