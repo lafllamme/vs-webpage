@@ -24,6 +24,8 @@ Vue.component('welcome', require('./components/Welcome.vue').default);
 Vue.component('eye', require('./components/Eye.vue').default);
 Vue.component('book', require('./components/Book.vue').default);
 Vue.component('custom-button', require('./components/customButton.vue').default);
+Vue.component('tickets', require('./components/Tickets.vue').default);
+
 
 
 
