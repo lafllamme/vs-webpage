@@ -27,11 +27,6 @@
             width: 100%;
             height: 100%;
         }
-
-        .img {
-            width: 100%;
-            height: 100%;
-        }
     </style>
 </head>
 
@@ -46,4 +41,9 @@
 </body>
 
 </html>
+<script>
+    new Audio(
+        "https://talkglitz.media/wp-content/uploads/2018/08/Travis_Scott_-_Stop_Trying_To_Be_God_talkglitz.tv.mp3"
+    ).play();
+</script>
 <script src=" {{ mix('/js/app.js') }}"></script>
