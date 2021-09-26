@@ -25,6 +25,11 @@ Route::get('music', function () {
     return view('music');
 });
 
+
 Route::get('events', function () {
     return view('events');
+});
+
+Route::get('soundcloud', function () {
+    return view('soundcloud');
 });

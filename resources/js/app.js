@@ -23,10 +23,13 @@ window.Vue = require('vue').default;
 Vue.component('welcome', require('./components/Welcome.vue').default);
 Vue.component('eye', require('./components/Eye.vue').default);
 Vue.component('book', require('./components/Book.vue').default);
+Vue.component('custom-menu', require('./components/Menu.vue').default);
 Vue.component('custom-button', require('./components/customButton.vue').default);
 Vue.component('tickets', require('./components/Tickets.vue').default);
 Vue.component('event-book', require('./components/EventBook.vue').default);
 Vue.component('sound-cloud', require('./components/SoundCloud.vue').default);
+
+Vue.component('music-player', require('./components/MusicPlayer.vue').default);
 
 
 

@@ -13,13 +13,22 @@
         body {
             background-color: black;
         }
+
+        .sub_div_one {
+            position: fixed;
+            left: 35%;
+            bottom: 10%;
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
 
     <div id="app">
-        <music-player></music-player>
+        <sound-cloud></sound-cloud>
+        <custom-button class="sub_div_one" title="Back" href="{{url('/home')}}"></custom-button>
+
     </div>
 </body>
 
