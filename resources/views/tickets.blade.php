@@ -36,7 +36,7 @@
     </div>
 
     <div id="app">
-        <tickets></tickets>
+        <event-book></event-book>
     </div>
 </body>
 

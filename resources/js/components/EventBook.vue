@@ -1,23 +1,25 @@
 <template>
-  <div class="perspective-wrapper">
-    <div class="z-wrapper">
-      <div class="book"></div>
-      <div class="spine"></div>
-      <div class="backface"></div>
+  <div>
+    <div class="perspective-wrapper">
+      <div class="z-wrapper">
+        <div class="book"></div>
+        <div class="spine"></div>
+        <div class="backface"></div>
+      </div>
     </div>
-  </div>
-  <div class="perspective-wrapper">
-    <h3>3D CSS perspective transformation</h3>
-    <p>
-      This is a first crack at this type of 3D CSS transform. The challenge is
-      to take an image and transform it one way for the cover and -270 degrees
-      for the spine.
-    </p>
-    <p>
-      <a href="http://nos.twnsnd.co/" target="_blank"
-        >Image taken from New Old Stock</a
-      >
-    </p>
+    <!-- <div class="perspective-wrapper">
+      <h3>3D CSS perspective transformation</h3>
+      <p>
+        This is a first crack at this type of 3D CSS transform. The challenge is
+        to take an image and transform it one way for the cover and -270 degrees
+        for the spine.
+      </p>
+      <p>
+        <a href="http://nos.twnsnd.co/" target="_blank"
+          >Image taken from New Old Stock</a
+        >
+      </p>
+    </div> -->
   </div>
 </template>
 
@@ -25,92 +27,109 @@
 export default {};
 </script>
 
-<style lang="sass" scoped>
-$book-width: 500px
-$book-height: 700px
+<style scoped>
+.perspective-wrapper {
+  position: relative;
+  height: 700px;
+  width: 500px;
+  line-height: 1.4;
+  margin: 4em auto;
+  perspective: 1500px;
+}
 
-.perspective-wrapper
-    position: relative
-    height: $book-height
-    width: $book-width
-    line-height: 1.4
-    margin: 4em auto
-    perspective: 1500px
+.z-wrapper {
+  perspective: 1500px;
+  height: 700px;
+}
 
-.z-wrapper
-    perspective: 1500px
-    height: $book-height
+.book,
+.spine,
+.backface {
+  position: absolute;
+  width: 500px;
+  height: 700px;
+  top: 0;
+  left: 0;
+  border: 1px solid #444;
+  opacity: 0.9;
+}
 
-.book, .spine, .backface
-    position: absolute
-    width: $book-width
-    height: $book-height
-    top: 0
-    left: 0
-    border: 1px solid #444
-    opacity: 0.9
+.book {
+  z-index: 2;
+  background-image: url(https://i.imgur.com/Bh68oMa.jpg);
+  background-size: 700px;
+  background-position: 560px;
+}
 
-$book-image: url(https://i.imgur.com/Bh68oMa.jpg)
+.backface {
+  z-index: 0;
+  box-shadow: -10px 20px 120px rgba(0, 0, 0, 0.9);
+  background-color: black;
+}
 
-.book
-    z-index: 2
-background:
-    image: $book-image
-    size: $book-width + 200
-    position: 560px
+.spine {
+  position: absolute;
+  z-index: 1;
+  width: 60px;
+  background-image: url(https://i.imgur.com/Bh68oMa.jpg),
+    repeating-linear-gradient(to bottom, #777, #777);
+  background-size: 700px;
+  background-position: 560px;
+  background-blend-mode: multiply;
+}
 
-.backface
-    z-index: 0
-    box-shadow: -10px 20px 120px rgba(0,0,0,0.9)
-    background-color: black
+.book,
+.spine,
+.backface {
+  transform-origin: left;
+}
 
-.spine
-    position: absolute
-    z-index: 1
-    width: 60px
-  // same image with a bit of a dark color overlay
-background:
-    image: $book-image, repeating-linear-gradient(to bottom, #777, #777)
-    size: $book-width + 200
-    position: 560px
-    blend-mode: multiply
+.book {
+  animation: book-animation 2s infinite alternate;
+}
 
-// Animated Transforms
-.book, .spine, .backface
-    transform-origin: left
+@keyframes book-animation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(45deg);
+  }
+}
+.backface {
+  animation: backface-animation 2s infinite alternate;
+}
 
-$rotate-amount: 45deg
+@keyframes backface-animation {
+  0% {
+    transform: rotateY(0deg) translateZ(-60px);
+  }
+  100% {
+    transform: rotateY(45deg) translateZ(-60px);
+  }
+}
+.spine {
+  animation: spine-animation 2s infinite alternate;
+}
 
-.book
-    animation: book-animation 2s infinite alternate
-@keyframes book-animation
-    0%
-        transform: rotateY(0deg)
-    100%
-        transform: rotateY($rotate-amount)
+@keyframes spine-animation {
+  0% {
+    transform: rotateY(-270deg);
+  }
+  100% {
+    transform: rotateY(-225deg);
+  }
+}
+.z-wrapper {
+  animation: z-animation 2s infinite alternate;
+}
 
-.backface
-    animation: backface-animation 2s infinite alternate
-@keyframes backface-animation
-    0%
-        transform: rotateY(0deg) translateZ(-60px)
-    100%
-        transform: rotateY($rotate-amount) translateZ(-60px)
-
-.spine
-    animation: spine-animation 2s infinite alternate
-@keyframes spine-animation
-    0%
-        transform: rotateY(-270deg)
-    100%
-        transform: rotateY($rotate-amount - 270)
-
-// A subtle shift on the z-axis makes it more dynamic
-.z-wrapper
-    animation: z-animation 2s infinite alternate
-@keyframes z-animation
-    0%
-        transform: rotateZ(0deg)
-    100%
-        transform: rotateZ(-7deg)
+@keyframes z-animation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-7deg);
+  }
+}
 </style>
