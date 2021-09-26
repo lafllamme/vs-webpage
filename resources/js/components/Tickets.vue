@@ -7,7 +7,7 @@
         <div class="backface"></div>
       </div>
     </div>
-    <div class="perspective-wrapper">
+    <!-- <div class="perspective-wrapper">
       <h3>3D CSS perspective transformation</h3>
       <p>
         This is a first crack at this type of 3D CSS transform. The challenge is
@@ -19,7 +19,7 @@
           >Image taken from New Old Stock</a
         >
       </p>
-    </div>
+    </div> -->
   </div>
 </template>
 
