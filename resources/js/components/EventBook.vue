@@ -56,7 +56,7 @@ export default {};
 
 .book {
   z-index: 2;
-  background-image: url(https://i.imgur.com/Bh68oMa.jpg);
+  background-image: url(https://i.imgur.com/BuWY6UJ.jpg);
   background-size: 700px;
   background-position: 560px;
 }
@@ -71,7 +71,7 @@ export default {};
   position: absolute;
   z-index: 1;
   width: 60px;
-  background-image: url(https://i.imgur.com/Bh68oMa.jpg),
+  background-image: url(https://i.imgur.com/BuWY6UJ.jpg),
     repeating-linear-gradient(to bottom, #777, #777);
   background-size: 700px;
   background-position: 560px;
