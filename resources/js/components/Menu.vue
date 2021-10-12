@@ -2,9 +2,13 @@
   <nav class="nav">
     <a href="/music" class="nav-item is-active" active-color="orange">Music</a>
     <a href="/soundcloud" class="nav-item" active-color="green">Soundcloud</a>
-    <a href="#" class="nav-item" active-color="blue">Tickets</a>
-    <a href="#" class="nav-item" active-color="red">Blog</a>
-    <a href="#" class="nav-item" active-color="rebeccapurple">Contact</a>
+    <a href="#" onClick='alert("soon!")' class="nav-item" active-color="blue"
+      >Tickets</a
+    >
+    <a href="/calendar" class="nav-item" active-color="red">Calendar</a>
+    <a href="/upcoming" class="nav-item" active-color="rebeccapurple"
+      >Upcoming</a
+    >
     <span class="nav-indicator"></span>
   </nav>
 </template>

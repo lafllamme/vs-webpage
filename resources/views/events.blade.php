@@ -32,8 +32,9 @@
             background-color: black;
         }
 
-        .compact-form {
-            width: 20%;
+        .container {
+            width: 100%;
+            height: 40%;
         }
     </style>
 </head>
@@ -43,13 +44,17 @@
         <img src="https://i.pinimg.com/originals/b5/f6/0e/b5f60e19a5057b402648bf109c8aa34b.gif" class="stretch" alt="" />
     </div>
 
-    <div id="app" class="contact-form">
+    <div id="app" class="container">
         <event-book onclick="gotoWebsite('{{ url('/') }}')"></event-book>
     </div>
 </body>
 
 </html>
 <script>
+    document.addEventListener('DOMContentLoaded', toggleZoomScreen = () => {
+        document.body.style.zoom = "70%";
+    }, false);
+
     gotoWebsite = (string) => {
         window.location = string;
     }

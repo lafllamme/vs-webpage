@@ -28,6 +28,8 @@ Vue.component('custom-button', require('./components/customButton.vue').default)
 Vue.component('tickets', require('./components/Tickets.vue').default);
 Vue.component('event-book', require('./components/EventBook.vue').default);
 Vue.component('sound-cloud', require('./components/SoundCloud.vue').default);
+Vue.component('upcoming', require('./components/Upcoming.vue').default);
+Vue.component('calendar', require('./components/Calendar.vue').default);
 
 Vue.component('music-player', require('./components/MusicPlayer.vue').default);
 

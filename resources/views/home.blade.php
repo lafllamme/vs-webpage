@@ -68,7 +68,9 @@
         <br>
         <br>
         <br>
-        <custom-menu></custom-menu>
+        <center>
+            <custom-menu></custom-menu>
+        </center>
         <custom-button class="sub_div_one" title="Events" href="{{url('/events')}}"></custom-button>
         <custom-button class="sub_div_three" title="Back" href="{{url('/')}}"></custom-button>
 

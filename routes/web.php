@@ -30,6 +30,14 @@ Route::get('events', function () {
     return view('events');
 });
 
+Route::get('upcoming', function () {
+    return view('upcoming');
+});
+
+Route::get('calendar', function () {
+    return view('calendar');
+});
+
 Route::get('soundcloud', function () {
     return view('soundcloud');
 });

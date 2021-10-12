@@ -2,6 +2,8 @@
     "private": true,
     "scripts": {
         "dev": "npm run development",
+        "backend": "./vendor/bin/sail up",
+        "app-start": "npm run backend && npm run dev",
         "development": "mix",
         "watch": "mix watch",
         "watch-poll": "mix watch -- --watch-options-poll=1000",
@@ -23,5 +25,9 @@
         "vue": "^2.6.12",
         "vue-loader": "^15.9.8",
         "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "v-calendar": "^2.3.4",
+        "vite": "^2.6.2"
     }
 }
