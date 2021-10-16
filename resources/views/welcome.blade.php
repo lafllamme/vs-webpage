@@ -16,7 +16,7 @@
     </style>
 </head>
 
-<body>
+<body id="body">
     <!--    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -46,6 +46,15 @@
     gotoWebsite = (string) => {
         window.location = string;
     }
+    setInterval(redirect = () => {
+        // const app = document.getElementById('body');
+        // console.log(app);
+        // app.addEventListener('scroll', (event) => {
+        //     console.log('it works');
+        // })
+        window.location.replace("/home");
+
+    }, 8000)
 </script>
 <script src=" {{ mix('/js/app.js') }}">
 </script>
