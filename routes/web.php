@@ -30,6 +30,10 @@ Route::get('events', function () {
     return view('events');
 });
 
+Route::get('tickets', function () {
+    return view('tickets');
+});
+
 Route::get('upcoming', function () {
     return view('upcoming');
 });
@@ -40,4 +44,8 @@ Route::get('calendar', function () {
 
 Route::get('soundcloud', function () {
     return view('soundcloud');
+});
+
+Route::post('newtest', function() {
+    dd(request()->all());
 });
