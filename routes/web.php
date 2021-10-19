@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +31,16 @@ Route::get('events', function () {
     return view('events');
 });
 
-Route::get('tickets', function () {
-    return view('tickets');
-});
+// Route::get('tickets', function () {
+//     return view('tickets');
+// });
+
+Route::get('tickets', 
+[ContactController::class, 'loadTicketForm'])
+->name('tickets');
+
+Route::post('tickets', [ContactController::class, 'sendTicketForm'])
+->name('sendtickets');
 
 Route::get('upcoming', function () {
     return view('upcoming');

@@ -1,12 +1,14 @@
 <template>
   <nav class="nav">
-    <a href="/music" class="nav-item is-active" active-color="orange">Music</a>
-    <a href="/soundcloud" class="nav-item" active-color="green">Soundcloud</a>
     <a href="/tickets" class="nav-item" active-color="blue"
       >Tickets</a
+    ><a href="/music" class="nav-item is-active" active-color="orange">Music</a>
+    <a href="/soundcloud" class="nav-item" active-color="green">Soundcloud</a>
+    <a href="https://www.instagram.com/verschluesseltes.system/" class="nav-item" active-color="rebeccapurple"
+      >Social</a
     >
-    <a href="/calendar" onClick='alert("soon!")' class="nav-item" active-color="red">Calendar</a>
-    <a href="/upcoming" onClick='alert("soon!")' class="nav-item" active-color="rebeccapurple"
+    <a href="#" onClick='alert("soon!")' class="nav-item" active-color="red">Calendar</a>
+    <a href="#" onClick='alert("soon!")' class="nav-item" active-color="rebeccapurple"
       >Upcoming</a
     >
     <span class="nav-indicator"></span>
