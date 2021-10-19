@@ -14,11 +14,12 @@
 	box-sizing: border-box;
 }
 
+
 body {
 	font-family: helvetica;
 	height: 100vh;
 	width: 100vw;
-	background: #e90052;
+	background: rgb(5,5,11); background: linear-gradient(90deg, rgba(5,5,11,1) 0%, rgba(66,66,68,1) 5%, rgba(172,172,172,1) 100%);
 	margin: 0;
 	display: flex;
 	transition: background 0.5s;
@@ -227,27 +228,37 @@ input.label::placeholder {
 
 body.blue,
 .item.blue {
-	background: #04f5ff;
+	background: url('https://www.gifcen.com/wp-content/uploads/2021/03/optical-illusions-gif-1.gif');
+	background-size: 100%;
+
 }
 
 body.yellow,
 .item.yellow {
-	background: #ebff00;
+	background: url('https://i.pinimg.com/originals/c0/7a/8e/c07a8ea4e3c86f91a4cde1d1ecdc6428.gif');
+	background-size: 100%;
+
 }
 
 body.purple,
 .item.purple {
-	background: #e90052;
+	background: url('https://media1.giphy.com/avatars/ectorasgoofy/WrESNu3WCt1D.gif');
+	background-size: 100%;
+
 }
 
 body.green,
 .item.green {
-	background: #00ff85;
+	background: url('https://i.pinimg.com/originals/84/27/61/842761fe270f9a355a4a9f6a483f4172.gif');
+	background-size: 100%;
+
 }
 
 body.violet,
 .item.violet {
-	background: #38003c;
+	background: url('https://media0.giphy.com/media/oNtCaLOLjalji/giphy.gif?cid=ecf05e47k7k77pcjpgf4nm51buwhki8kmriqe047es1qpdzb&rid=giphy.gif&ct=g');
+	background-size: 100%;
+
 }
 
 div.btn.blue span {
@@ -427,7 +438,7 @@ div.btn.violet span:hover {
 		</div>
 		<div class="cube__face cube__face--bottom" id="step__2">
 			<div class="container">
-				<input type="text" name="fullname" placeholder="What's your full name ?">
+				<input type="text" name="fullname" placeholder="Full Name ?">
 				<div class="btn">
 					<span data-step="2">Continue</span>
 				</div>
@@ -435,7 +446,7 @@ div.btn.violet span:hover {
 		</div>
 		<div class="cube__face" id="step__3">
 			<div class="container">
-				<input type="email"  name="email" placeholder="Tell me your email adress">
+				<input type="email"  name="email" placeholder="E-Mail ?">
 				<div class="btn">
 					<span data-step="3">Continue</span>
 				</div>
@@ -443,7 +454,7 @@ div.btn.violet span:hover {
 		</div>
 		<div class="cube__face" id="step__4">
 			<div class="container">
-				<input type="password" name="password" placeholder="Enter your password (at least 4 chars)">
+				<input type="password" name="password" placeholder="Code ?">
 				<div class="btn">
 					<span data-step="4">Continue</span>
 				</div>
@@ -480,17 +491,14 @@ div.btn.violet span:hover {
 	</div>
 </div>
 <div class="welcome">
-	<div class="content">Welcome !</div>
-    <img src="https://i.imgur.com/HPo8wed.gif" alt="">
+	<div class="content">Welcome to the System !</div>
 </div>
     <div id="app"></div>
 </body>
 
 </html>
 <script>
- myFunction = () => {
-    console.log('okay');
-}
+
 const btn = document.querySelectorAll(".btn span");
 
 for (let i = 0; i < btn.length; i++) {
@@ -592,7 +600,8 @@ for (let i = 0; i < inputs.length; i++) {
 			}
 		}
 		if (this.getAttribute("type") == "password") {
-			if (this.value.length > 3) {
+			if (this.value.length > 3 && this.value == 'system') {
+				console.log(this.value);
 				this.closest(".container")
 					.querySelector(".btn")
 					.classList.add("show");

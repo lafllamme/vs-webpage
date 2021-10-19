@@ -66,7 +66,7 @@
         </div>
         <div v-cloak></div>
       </div>
-      <a href="/home" target="_blank" class="github-btn"> Go Back </a>
+      <a href="/home" class="github-btn"> Go Back </a>
     </div>
 
     <svg
