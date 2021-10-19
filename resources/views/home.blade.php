@@ -14,25 +14,11 @@
         body {
             height: 100%;
             overflow: hidden;
-        }
-
-        body {
-            perspective: 700px;
-            margin: 0;
-        }
-
-        #background {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            z-index: 0;
-        }
-
-        .stretch {
-            width: 100%;
-            height: 100%;
+            background: url('https://i.imgur.com/F0ESAIH.gif');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         .sub_div_one {
@@ -60,15 +46,15 @@
 </head>
 
 <body>
-    <div id="background">
-        <img src="https://i.imgur.com/F0ESAIH.gif" class="stretch" alt="" />
-    </div>
+
     <div id="app">
-        <book></book>
-        <br>
-        <br>
-        <br>
         <center>
+            <book></book>
+            <br>
+            <br>
+            <br>
+            <br>
+
             <custom-menu></custom-menu>
         </center>
         <custom-button class="sub_div_one" title="Events" onclick="alert('soon!')" href="#"></custom-button>

@@ -19,12 +19,16 @@
 			src: url("/fonts/mainFont.woff2") format("woff2");
 		}
 
+
 		body {
 			font-family: "mainFont", sans-serif;
 			height: 100vh;
 			width: 100vw;
-			background: rgb(5, 5, 11);
-			background: linear-gradient(90deg, rgba(5, 5, 11, 1) 0%, rgba(66, 66, 68, 1) 5%, rgba(172, 172, 172, 1) 100%);
+			background: url('https://j.gifs.com/5y8xPR.gif');
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
 			margin: 0;
 			display: flex;
 			transition: background 0.5s;
@@ -234,35 +238,50 @@
 		body.blue,
 		.item.blue {
 			background: url('https://www.gifcen.com/wp-content/uploads/2021/03/optical-illusions-gif-1.gif');
-			background-size: 100%;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
 
 		}
 
 		body.yellow,
 		.item.yellow {
 			background: url('https://i.pinimg.com/originals/c0/7a/8e/c07a8ea4e3c86f91a4cde1d1ecdc6428.gif');
-			background-size: 100%;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
 
 		}
 
 		body.purple,
 		.item.purple {
 			background: url('https://media1.giphy.com/avatars/ectorasgoofy/WrESNu3WCt1D.gif');
-			background-size: 100%;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
 
 		}
 
 		body.green,
 		.item.green {
-			background: url('https://i.pinimg.com/originals/84/27/61/842761fe270f9a355a4a9f6a483f4172.gif');
-			background-size: 100%;
+			background: url('https://i.pinimg.com/originals/b7/da/d3/b7dad3b9d1a9970f01a68f5d6e9051f5.gif');
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
 
 		}
 
 		body.violet,
 		.item.violet {
-			background: url('https://media0.giphy.com/media/oNtCaLOLjalji/giphy.gif?cid=ecf05e47k7k77pcjpgf4nm51buwhki8kmriqe047es1qpdzb&rid=giphy.gif&ct=g');
-			background-size: 100%;
+			background: url('https://i.pinimg.com/originals/43/56/74/4356746a4fb0b09c4b06dd3ca19d9fe0.gif');
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
 
 		}
 
@@ -587,6 +606,13 @@
 				transform: translate(0px, 0px);
 			}
 		}
+
+		.sub_div_three {
+			position: fixed;
+			left: 0%;
+			bottom: -200%;
+			width: 100%;
+		}
 	</style>
 </head>
 
@@ -686,7 +712,9 @@
 		</div>
 	</div>
 
-	<div id="app"></div>
+	<div id="app">
+		<custom-button class="sub_div_three" title="Back" href="{{url('/')}}"></custom-button>
+	</div>
 </body>
 
 </html>
