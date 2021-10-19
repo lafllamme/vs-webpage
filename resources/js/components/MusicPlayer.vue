@@ -54,19 +54,19 @@
         <div class="progress" ref="progress">
           <div class="progress__top">
             <div class="album-info" v-if="currentTrack">
-              <div class="album-info__name">{{ currentTrack.artist }}</div>
-              <div class="album-info__track">{{ currentTrack.name }}</div>
+              <div class="album-info__name" style="font-family: 'mainFont'">{{ currentTrack.artist }}</div>
+              <div class="album-info__track" style="font-family: 'mainFont'">{{ currentTrack.name }}</div>
             </div>
-            <div class="progress__duration">{{ duration }}</div>
+            <div class="progress__duration" style="font-family: 'mainFont'">{{ duration }}</div>
           </div>
           <div class="progress__bar" @click="clickProgress">
             <div class="progress__current" :style="{ width: barWidth }"></div>
           </div>
-          <div class="progress__time">{{ currentTime }}</div>
+          <div class="progress__time" style="font-family: 'mainFont'">{{ currentTime }}</div>
         </div>
         <div v-cloak></div>
       </div>
-      <a href="/home" class="github-btn"> Go Back </a>
+      <a href="/home" style="font-family: 'mainFont'" class="github-btn"> Go Back </a>
     </div>
 
     <svg
@@ -183,7 +183,7 @@ export default {
       tracks: [
         {
           name: "Track 01",
-          artist: "Verschlüsseltes System",
+          artist: "Verschluesseltes System",
           cover: "https://i.imgur.com/0GIF2tF.jpg",
           source:
             "https://www.thinknews.com.ng/wp-content/uploads/2020/10/Travis_Scott_Ft_Young_Thug_MIA_-_FRANCHISE.mp3",
@@ -192,7 +192,7 @@ export default {
         },
         {
           name: "Track 02",
-          artist: "Verschlüsseltes System",
+          artist: "Verschluesseltes System",
           cover: "https://i.imgur.com/0GIF2tF.jpg",
           source:
             "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
@@ -201,7 +201,7 @@ export default {
         },
         {
           name: "Track 03",
-          artist: "Verschlüsseltes System",
+          artist: "Verschluesseltes System",
           cover: "https://i.imgur.com/0GIF2tF.jpg",
           source:
             "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
@@ -210,7 +210,7 @@ export default {
         },
         {
           name: "Track 04",
-          artist: "Verschlüsseltes System",
+          artist: "Verschluesseltes System",
           cover: "https://i.imgur.com/0GIF2tF.jpg",
           source:
             "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
@@ -219,7 +219,7 @@ export default {
         },
         {
           name: "Track 05",
-          artist: "Verschlüsseltes System",
+          artist: "Verschluesseltes System",
           cover: "https://i.imgur.com/0GIF2tF.jpg",
           source:
             "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
@@ -228,7 +228,7 @@ export default {
         },
         {
           name: "Track 06",
-          artist: "Verschlüsseltes System",
+          artist: "Verschluesseltes System",
           cover: "https://i.imgur.com/0GIF2tF.jpg",
           source:
             "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
@@ -237,7 +237,7 @@ export default {
         },
         {
           name: "Track 06",
-          artist: "Verschlüsseltes System",
+          artist: "Verschluesseltes System",
           cover: "https://i.imgur.com/0GIF2tF.jpg",
           source:
             "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
@@ -246,7 +246,7 @@ export default {
         },
         {
           name: "Track 07",
-          artist: "Verschlüsseltes System",
+          artist: "Verschluesseltes System",
           cover: "https://i.imgur.com/0GIF2tF.jpg",
           source:
             "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
@@ -255,7 +255,7 @@ export default {
         },
         {
           name: "Track 08",
-          artist: "Verschlüsseltes System",
+          artist: "Verschluesseltes System",
           cover:
             "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
           source:
@@ -393,10 +393,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+	@font-face {
+			font-family: "mainFont";
+			src: url("/fonts/mainFont.woff2") format("woff2");
+		}
 body {
-  // background: #e1e7ec;
   background: #dfe7ef;
-  font-family: "Bitter", serif;
+  font-family: "mainFont", serif;
 }
 
 * {
@@ -723,7 +726,7 @@ body {
   color: #fff;
   font-weight: bold;
   letter-spacing: 1px;
-  font-size: 16px;
+  font-size: 32px;
   transition: all 0.3s ease-in-out;
 
   @media screen and (min-width: 500px) {

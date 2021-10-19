@@ -43,8 +43,10 @@ items.forEach((item, index) => {
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap");
-
+@font-face {
+			font-family: "mainFont";
+			src: url("/fonts/mainFont.woff2") format("woff2");
+		}
 * {
   box-sizing: border-box;
 }
@@ -78,7 +80,7 @@ body {
   transition: 0.3s;
   margin: 0 6px;
   z-index: 1;
-  font-family: "DM Sans", sans-serif;
+  font-family: "mainFont", sans-serif;
   font-weight: 500;
   position: relative;
 

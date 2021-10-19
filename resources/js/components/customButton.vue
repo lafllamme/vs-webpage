@@ -14,8 +14,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "https://fonts.googleapis.com/css?family=Rubik+One";
-
+@font-face {
+			font-family: "mainFont";
+			src: url("/fonts/mainFont.woff2") format("woff2");
+		}
 %test {
   position: absolute;
   content: "";
@@ -31,9 +33,9 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   vertical-align: middle;
-  font-family: "Rubik One", sans-serif;
+  font-family: "mainFont", sans-serif;
   text-decoration: none;
-  font-size: 4vw;
+  font-size: 3vw;
   transition: all 0.5s;
   background-color: #494b4d;
 

@@ -14,9 +14,13 @@
 			box-sizing: border-box;
 		}
 
+		@font-face {
+			font-family: "mainFont";
+			src: url("/fonts/mainFont.woff2") format("woff2");
+		}
 
 		body {
-			font-family: helvetica;
+			font-family: "mainFont", sans-serif;
 			height: 100vh;
 			width: 100vw;
 			background: rgb(5, 5, 11);
@@ -405,36 +409,183 @@
 			background: #38003c;
 		}
 
-		h1 {
-			color: #484848;
-			font-size: 50px;
-			font-weight: bold;
-			font-family: monospace;
-			letter-spacing: 7px;
-			cursor: pointer
+
+
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
 		}
 
-		h1 span {
-			transition: .5s linear
+		:root {
+			--color-primary: #111111;
+			--color-secondary: #333333;
+			--color-tertiary: #555555;
+			--color-quaternary: #777777;
+			--color-quinary: #999999;
+			/*
+  --color-primary: #5192ED;
+  --color-secondary: #69A1F0;
+  --color-tertiary: #7EAEF2;
+  --color-quaternary: #90BAF5;
+  --color-quinary: #A2C4F5;
+  */
 		}
 
-		h1:hover span:nth-child(1) {
-			margin-right: 5px
+		.content {
+			display: flex;
+			align-content: center;
+			justify-content: center;
 		}
 
-		h1:hover span:nth-child(1):after {
-			content: "(bald)";
+		.text_shadows {
+			text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+			font-family: "mainFont", sans-serif;
+			font-weight: 400;
+			text-transform: uppercase;
+			font-size: calc(1rem + 2vw);
+			text-align: center;
+			margin: 0;
+			color: var(--color-primary);
+			-webkit-animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+			animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+			letter-spacing: 0.4rem;
 		}
 
-		h1:hover span:nth-child(2) {
-			margin-left: 30px
+		@-webkit-keyframes shadows {
+			0% {
+				text-shadow: none;
+			}
+
+			10% {
+				text-shadow: 3px 3px 0 var(--color-secondary);
+			}
+
+			20% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+			}
+
+			30% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+			}
+
+			40% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+			}
+
+			50% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+			}
+
+			60% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+			}
+
+			70% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+			}
+
+			80% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+			}
+
+			90% {
+				text-shadow: 3px 3px 0 var(--color-secondary);
+			}
+
+			100% {
+				text-shadow: none;
+			}
 		}
 
-		h1:hover span {
-			color: #fff;
-			text-shadow: 0 0 10px #fff,
-				0 0 20px #fff,
-				0 0 40px #fff;
+		@keyframes shadows {
+			0% {
+				text-shadow: none;
+			}
+
+			10% {
+				text-shadow: 3px 3px 0 var(--color-secondary);
+			}
+
+			20% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+			}
+
+			30% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+			}
+
+			40% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+			}
+
+			50% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+			}
+
+			60% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+			}
+
+			70% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+			}
+
+			80% {
+				text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+			}
+
+			90% {
+				text-shadow: 3px 3px 0 var(--color-secondary);
+			}
+
+			100% {
+				text-shadow: none;
+			}
+		}
+
+		@-webkit-keyframes move {
+			0% {
+				transform: translate(0px, 0px);
+			}
+
+			40% {
+				transform: translate(-12px, -12px);
+			}
+
+			50% {
+				transform: translate(-12px, -12px);
+			}
+
+			60% {
+				transform: translate(-12px, -12px);
+			}
+
+			100% {
+				transform: translate(0px, 0px);
+			}
+		}
+
+		@keyframes move {
+			0% {
+				transform: translate(0px, 0px);
+			}
+
+			40% {
+				transform: translate(-12px, -12px);
+			}
+
+			50% {
+				transform: translate(-12px, -12px);
+			}
+
+			60% {
+				transform: translate(-12px, -12px);
+			}
+
+			100% {
+				transform: translate(0px, 0px);
+			}
 		}
 	</style>
 </head>
@@ -443,12 +594,13 @@
 	<div class="scene">
 		@if(Session::has('success'))
 		<center>
-			<div class="alert alert-success">
-				<h1><span>{{ Session::get('success') }}
-						@php
-						Session::forget('success');
-						@endphp</span></h1>
+			<div class="content">
+				<h2 class="text_shadows">{{ Session::get('success') }}</h2>
 			</div>
+
+			@php
+			Session::forget('success');
+			@endphp
 		</center>
 		@endif
 		<div class="cube">
@@ -466,7 +618,7 @@
 					</nav>
 					<div class="cube__face  cube__face--front" id="step__1">
 						<div class="container">
-							<input type="text" class="label" placeholder="Color ?" disabled>
+							<input style="font-family: 'mainFont';" type="text" class="label" placeholder="Color ?" disabled>
 							<div class="radio" name="color">
 								<div class="item blue" data-color="blue"></div>
 								<div class="item yellow" data-color="yellow"></div>
@@ -481,7 +633,7 @@
 					</div>
 					<div class="cube__face cube__face--bottom" id="step__2">
 						<div class="container">
-							<input type="text" name="fullname" placeholder="Full Name ?">
+							<input style="font-family: 'mainFont';" type="text" name="fullname" placeholder="Full Name ?">
 							<div class="btn">
 								<span data-step="2">Continue</span>
 							</div>
@@ -489,7 +641,7 @@
 					</div>
 					<div class="cube__face" id="step__3">
 						<div class="container">
-							<input type="email" name="email" placeholder="E-Mail ?">
+							<input style="font-family: 'mainFont';" type="email" name="email" placeholder="E-Mail ?">
 							<div class="btn">
 								<span data-step="3">Continue</span>
 							</div>
@@ -497,7 +649,7 @@
 					</div>
 					<div class="cube__face" id="step__4">
 						<div class="container">
-							<input type="password" name="password" placeholder="Code ?">
+							<input style="font-family: 'mainFont';" type="password" name="password" placeholder="Code ?">
 							<div class="btn">
 								<span data-step="4">Continue</span>
 							</div>
@@ -505,7 +657,7 @@
 					</div>
 					<div class="cube__face" id="step__5">
 						<div class="container">
-							<select name="tickets" id="fav_color">
+							<select style="font-family: 'mainFont'" name="tickets" id="fav_color">
 								<option disabled selected>Tickets ?</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
@@ -520,7 +672,7 @@
 					</div>
 					<div class="cube__face" id="step__6">
 						<div class="container">
-							<input type="text" name="fullname" class="label" placeholder="Are you amazing ?" disabled>
+							<input style="font-family: 'mainFont';" type="text" name="fullname" class="label" placeholder="Are you amazing ?" disabled>
 							<div class="right">
 								<label for="">No</label>
 								<div class="checkbox">
@@ -533,9 +685,7 @@
 			</form>
 		</div>
 	</div>
-	<div class="welcome">
-		<div class="content">Welcome to the System !</div>
-	</div>
+
 	<div id="app"></div>
 </body>
 
@@ -601,7 +751,7 @@
 		this.classList.toggle("checked");
 		document.querySelector(".scene").classList.add("end");
 
-		document.querySelector(".welcome").classList.add("show");
+		// document.querySelector(".welcome").classList.add("show");
 		const form = document.getElementById("form");
 		form.submit()
 	});
